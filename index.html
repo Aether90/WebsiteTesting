@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Member User ID Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<meta name ="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+  <button id="theme-toggle">Switch Theme</button>
+  <div class="topbar">
+    <span>SSS.gov.ph</span>
+    <span>My.SSS</span>
+    <span>Corporate Online</span>
+    <span>Membership</span>
+    <span>Benefits</span>
+    <span>Loans</span>
+    <span>Publications</span>
+  </div>
+
+  <main class="container">
+    <h1>Online Member User ID Registration</h1>
+    <hr>
+
+    <p class="required">*Required Field</p>
+    <p>Please supply the following information as reported to the Social Security System</p>
+
+    <form id="registrationForm">
+      <div class="form-row">
+        <label for="crn">* CRN / SS Number:</label>
+        <input type="text" id="crn" required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">* Email Address:</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="form-row">
+        <label for="confirmEmail">* Confirm Email Address:</label>
+        <input type="email" id="confirmEmail" required>
+      </div>
+
+      <p class="note">
+        Length must be 8-20 characters. First character must be alphabetic.
+        No special characters except underscore. (Ex. Juan_Cruz1234)
+      </p>
+
+      <div class="form-row">
+        <label for="userId">* Preferred User ID:</label>
+        <input type="text" id="userId" required>
+      </div>
+
+      <div class="form-row">
+        <label for="confirmUserId">* Confirm Preferred User ID:</label>
+        <input type="text" id="confirmUserId" required>
+      </div>
+
+      <p class="note">The following characters are not allowed: # % ( ) - ' " &amp; \ /</p>
+
+      <div class="form-row">
+        <label for="surname">* Surname/Last Name:</label>
+        <input type="text" id="surname" required>
+      </div>
+
+      <div class="form-row">
+        <label for="givenName">* Given Name:</label>
+        <input type="text" id="givenName" required>
+      </div>
+
+      <div class="form-row">
+        <label for="middleName">Middle Name:</label>
+        <input type="text" id="middleName">
+      </div>
+
+      <div class="form-row">
+        <label for="dob">* Date of Birth:</label>
+        <input type="date" id="dob" required>
+      </div>
+
+      <h2>* Mailing Address (Philippine Address)</h2>
+
+      <div class="form-row">
+        <label for="room">Room / Floor / Unit No. &amp; Building Name:</label>
+        <input type="text" id="room">
+      </div>
+
+      <div class="form-row">
+        <label for="house">House / Lot &amp; Block No.:</label>
+        <input type="text" id="house">
+      </div>
+
+      <div class="form-row">
+        <label for="street">Street:</label>
+        <input type="text" id="street">
+      </div>
+
+      <div class="form-row">
+        <label for="subdivision">Subdivision:</label>
+        <input type="text" id="subdivision">
+      </div>
+
+      <div class="location-options">
+        <label><input type="checkbox" id="metroManila"> Metro Manila</label>
+        <label><input type="checkbox" id="province"> Province</label>
+      </div>
+
+      <div class="buttons">
+        <button type="submit">Submit Registration</button>
+        <button type="button" id="clearBtn" class="secondary">Clear</button>
+      </div>
+    </form>
+
+    <section id="output" class="output hidden">
+      <h2>Registration Information</h2>
+      <div id="outputContent"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
